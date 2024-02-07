@@ -1,0 +1,66 @@
+
+/* ---------------------------------------------- burger restaurant ------------------------------------------------------ */
+
+* body {
+    background-color: bisque !important;
+}
+/* ------------------------------------------------ Navbar ------------------------------------------------ */
+
+.navbar li{
+    padding: 15px 0;
+}
+
+.search form{
+    width: calc(60% - .85rem);
+
+}
+/* ------------------------------------------------ Dashboard ------------------------------------------------ */
+
+/* ----------------------------------------- dashboard tags -------------------------------------------- */
+.tags {
+    padding: 25px 25px;
+    text-transform: capitalize;
+    position: absolute;
+    font-size: 20px;
+}
+/* ------------------------------------------- persons stuff --------------------------------------------- */
+* li {
+    padding: 0 ;
+}
+
+.order-list div {
+    padding-bottom: 10px;
+}
+
+.if-online {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.if-online::before {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 9px;
+    height: 10px;
+    
+    background-color: white;
+    border-radius: 100%;
+    
+}
+
+.if-online::after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 7.5px;
+    height: 7.5px;
+    background-color: rgb(18, 187, 18);
+    border-radius: 100%;
+    transform: translateY(16%);
+}
+/* ------------------------------------------- close modal -------------------------------------------------- */
