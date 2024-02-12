@@ -4,29 +4,8 @@
 * body {
     background-color: bisque !important;
 }
-/* ------------------------------------------------ Navbar ------------------------------------------------ */
 
-.navbar li{
-    padding: 15px 0;
-}
-
-.search form{
-    width: calc(60% - .85rem);
-
-}
-/* ------------------------------------------------ Dashboard ------------------------------------------------ */
-
-/* ----------------------------------------- dashboard tags -------------------------------------------- */
-.tags {
-    padding: 25px 25px;
-    text-transform: capitalize;
-    position: absolute;
-    font-size: 20px;
-}
 /* ------------------------------------------- persons stuff --------------------------------------------- */
-* li {
-    padding: 0 ;
-}
 
 .order-list div {
     padding-bottom: 10px;
@@ -36,7 +15,6 @@
     position: relative;
     width: fit-content;
     height: fit-content;
-
 }
 
 .if-online::before {

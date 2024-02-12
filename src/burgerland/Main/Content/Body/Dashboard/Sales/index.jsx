@@ -1,9 +1,9 @@
-import React from "react";
+
 import FirstValue from "./FirstValue";
 import SecondValue from "./SecondValue";
 import ThirdValue from "./ThirdValue";
 import Chart from "./Chart";
-
+import {chart} from "./datas"
 
 const Sales = () => {
   return (
@@ -13,9 +13,8 @@ const Sales = () => {
       </div>
 
       <div className="h-3/6 border-b-2 px-5">
-       <Chart/>
+        <Chart data={chart} dataKey="sale"/>
       </div>
-
       <div className="h-2/6 flex justify-between items-center px-[25px] ">
         <div className="w-[25%] h-full">
           <FirstValue />

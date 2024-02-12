@@ -7,9 +7,7 @@ import React from "react";
 
 const Body = ({children}) => {
   return (
-    <div className="body w-full p-8">
-      {/* <Dashboard/> */}
-      {/* <Products/> */}
+    <div className="body h-full w-full p-8 bg-gray-400">
       {children}
     </div>
   );
