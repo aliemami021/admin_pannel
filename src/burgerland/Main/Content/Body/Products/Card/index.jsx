@@ -5,7 +5,7 @@ import { IoMdEye, IoIosSettings } from "react-icons/io";
 
 const Card = () => {
   return (
-    <div className="flex bg-white flex-col justify-start shadow-md rounded-2xl  max-w-[190px] h-[280px] overflow-hidden">
+    <div className="mb-2 flex bg-white flex-col justify-start shadow-md rounded-2xl  max-w-[190px] h-[280px] overflow-hidden">
       
         <img src={burger1} />
       

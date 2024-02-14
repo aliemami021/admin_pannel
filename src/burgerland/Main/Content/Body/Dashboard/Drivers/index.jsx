@@ -5,9 +5,9 @@ import { GoPersonFill } from "react-icons/go";
 const Drivers = () => {
   return (
     <section className="w-full h-full  capitalize">
-      <h1 className="tags">Drivers</h1>
+      <h1 className="pl-7 pt-5 font-semibold text-xl">Drivers</h1>
       <div className="h-[80%] w-full absolute bottom-0  ">
-        <div className="p-[15px]">
+        <div className="pl-7 pr-5">
           <div className="flex items-center justify-between pb-2">
             <div className="flex items-center flex-grow text-sm">
               <div className="if-online">

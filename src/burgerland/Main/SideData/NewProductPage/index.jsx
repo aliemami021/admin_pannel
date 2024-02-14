@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-const NewProductPage = ({ onClose }) => {
-
-
-  const [productName, setProductName]=useState("");
-  const [productDescription, setProductDescription]=useState("");
-  const [isSutableForVegans, setIsSutableForVegans]=useState(false);
-  const [productWeight, setProductWeight]=useState("");
-  const [productCalories, setProductCalories]=useState("");
-  const [productPrice, setProductPrice]=useState("");
+const NewProductPage = ({ onClose,  }) => {
+  const [productName, setProductName] = useState("");
+  const [productDescription, setProductDescription] = useState("");
+  const [isSutableForVegans, setIsSutableForVegans] = useState(false);
+  const [productWeight, setProductWeight] = useState("");
+  const [productCalories, setProductCalories] = useState("");
+  const [productPrice, setProductPrice] = useState("");
   // const [productImage, setProductImage]=useState(null);
 
-
-
   const handleClose = () => {
+    
     onClose({
       name: productName,
       des: productDescription,
@@ -24,18 +21,46 @@ const NewProductPage = ({ onClose }) => {
       price: productPrice,
       // Image: productImage,
     });
+    // const [errors, setErrors] = useState({
+    //   name: "",
+    //   des: "",
+    //   weight: "",
+    //   calories: "",
+    //   price: "",
+    // });
+
+    // const handleSubmit = () => {
+    //   const newErrors = {};
+
+    //   // -------------
+    //   if (!productName) {
+    //     newErrors.name = "name is recuired!";
+    //   }
+    //   if (!productDescription) {
+    //     newErrors.des = "descriptions are recuired!";
+    //   }
+
+    //   // ----------------
+    //   if (Object.keys(newErrors).length > 0) {
+    //     setErrors(newErrors);
+    //     return;
+    //   }
+
+    //   // -----------------------
+    //   setErrors({});
+    //   // -----------------------
+    // };
+  };
+
+  const handleSubmit = () => {
+    
+    onsubmit();
   };
 
   // const handleImageChange=(e)=>{
   //   setProductImage
-    
 
   // }
-
-
-  const handleAddNewProduct=()=>{
-
-  }
 
   return (
     <>
@@ -45,7 +70,7 @@ const NewProductPage = ({ onClose }) => {
             <h1 className=" normal-case text-xl">Add new product</h1>
             <button
               className="close-modal bg-inherit border-none text-black"
-              onClick={handleClose}
+              onClick={(handleClose)}
             >
               <IoMdClose size={30} />
             </button>
@@ -61,10 +86,10 @@ const NewProductPage = ({ onClose }) => {
               id="message"
               className="block p-2.5 w-full text-sm text-gray-900 bg-inherit rounded border border-gray-300 focus:ring-blue-100 focus:border-blue-100 dark:bg-gray-700 dark:border-gray-600  dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               value={productName}
-              onChange={(e) =>setProductName (e.target.value)}
+              onChange={(e) => setProductName(e.target.value)}
             />
-             {/*  /* --------------?????-------------- */ }
-            
+
+            {/*  /* --------------?????-------------- */}
           </div>
           <div className="mt-5 normal-case ">
             <label
@@ -76,8 +101,8 @@ const NewProductPage = ({ onClose }) => {
             <div
               id="message"
               className="block p-2.5 w-full text-sm text-gray-900 bg-inherit rounded border border-gray-300  focus:border-blue-100 dark:bg-gray-700 dark:border-gray-600 dark:text-white "
-                value={productDescription}
-                onChange={(e) => setProductDescription(e.target.value)}   
+              value={productDescription}
+              onChange={(e) => setProductDescription(e.target.value)}
             >
               <div className=" flex items-center justify-center border w-fit p-1">
                 X<span className="ml-2 capitalize">yechizi</span>
@@ -92,7 +117,7 @@ const NewProductPage = ({ onClose }) => {
                 type="checkbox"
                 id="vegan"
                 checked={isSutableForVegans}
-                onChange={() =>setIsSutableForVegans (!isSutableForVegans)}
+                onChange={() => setIsSutableForVegans(!isSutableForVegans)}
               />
               <label htmlFor="vegan" className="ml-2">
                 <span>logo</span>
@@ -110,7 +135,7 @@ const NewProductPage = ({ onClose }) => {
                 size={10}
                 id="weight-gr"
                 value={productWeight}
-                onChange={ (e) =>setProductWeight (e.target.value)}
+                onChange={(e) => setProductWeight(e.target.value)}
               />
             </div>
             <div className=" p-2 flex flex-col">
@@ -121,7 +146,7 @@ const NewProductPage = ({ onClose }) => {
                 size={10}
                 id="calories"
                 value={productCalories}
-                onChange={(e) =>setProductCalories(e.target.value)}
+                onChange={(e) => setProductCalories(e.target.value)}
               />
             </div>
           </div>
@@ -133,7 +158,7 @@ const NewProductPage = ({ onClose }) => {
               type="text"
               id="price"
               value={productPrice}
-              onChange={(e) =>setProductPrice (e.target.value)}
+              onChange={(e) => setProductPrice(e.target.value)}
             />
           </div>
 
@@ -144,9 +169,12 @@ const NewProductPage = ({ onClose }) => {
             />
           </div> */}
 
-          <button className="w-full py-2 flex items-center justify-center rounded-md mt-4 bg-gradient-to-r from-[#181818] to-[#363636]" onClick={handleClose}>
+          <button
+            className="w-full py-2 flex items-center justify-center rounded-md mt-4 bg-gradient-to-r from-[#181818] to-[#363636] text-white text-xl font-sans"
+            onClick={handleClose}
+          >
             <span>+</span>
-            <span>logo</span>
+            <span></span>
             add product to the menu
           </button>
         </div>

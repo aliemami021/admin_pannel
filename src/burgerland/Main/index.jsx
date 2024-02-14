@@ -10,7 +10,7 @@ import Content from "./Content";
 
 const Main = () => {
   return (
-    <main className=" min-h-[804px]  max-w-[1106px] flex  justify-center m-auto bg-red-50 rounded-[30px]  overflow-hidden">
+    <main className=" min-h-[804px]  max-w-[1105px] flex  justify-center m-auto bg-red-50 rounded-[30px]  overflow-hidden">
       <BrowserRouter>
         <Navbar />
         <Content>
