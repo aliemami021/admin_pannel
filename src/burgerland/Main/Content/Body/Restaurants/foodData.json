@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "image": "",
+        "name": "nam",
+        "address": "asdress",
+        "openingInfo": "opening",
+        "isManaged": "Manage Restaurant",
+        "isOn": true
+    },
+    {
+        "id": 2,
+        "image": "",
+        "name": "nam",
+        "address": "asdress",
+        "openingInfo": "opening",
+        "isManaged": "Manage Restaurant",
+        "isOn": true
+    }
+]

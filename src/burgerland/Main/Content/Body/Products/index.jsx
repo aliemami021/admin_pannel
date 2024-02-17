@@ -1,22 +1,20 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProductNavbar from "./ProductNavbar";
-import ProductContent from "./PoductContent";
+import ProductNavbar from "./PoductContent/ProductNavbar";
+import MainCourse from "./PoductContent/MainCourse"
+import { Outlet } from "react-router-dom";
 
 
 const Products = () => {
-
+  
   return (
     <section className=" w-full h-full flex flex-col ">
-      <BrowserRoute>
+      
         <ProductNavbar />
-        <ProductContent>
-        <Routes>
-          <Route path="" element={}></Route>
-        </Routes>
-        </ProductContent>
-      </BrowserRoute>
-
+        <MainCourse/>
+        
+        
+     
+     
     </section>
   );
 };

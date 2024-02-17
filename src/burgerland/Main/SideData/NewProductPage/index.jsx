@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-const NewProductPage = ({ onClose, onsubmit,  }) => {
+const NewProductPage = ({ onClose, onSubmit }) => {
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [isSutableForVegans, setIsSutableForVegans] = useState(false);
   const [productWeight, setProductWeight] = useState("");
   const [productCalories, setProductCalories] = useState("");
   const [productPrice, setProductPrice] = useState("");
-  // const [productImage, setProductImage]=useState(null);
+  const [productImage, setProductImage]=useState(null);
 
   const handleClose = () => {
-
     onClose();
     // const [errors, setErrors] = useState({
     //   name: "",
@@ -45,30 +44,22 @@ const NewProductPage = ({ onClose, onsubmit,  }) => {
   };
 
   const handleSubmit = () => {
+    onSubmit({
+      name: productName,
+      des: productDescription,
+      checkbox: isSutableForVegans,
+      weight: productWeight,
+      calory: productCalories,
+      price: productPrice,
+      image: productImage,
+    });
+  };
 
-    onsubmit([
-      {
-        productID: onsubmit.length,
-        name: productName,
-        des: productDescription,
-        checkbox: isSutableForVegans,
-        weight: productWeight,
-        calory: productCalories,
-        price: productPrice,
-        // Image: productImage,
-        category: category,
-      },
-    ]
-    );
+  const handleImageChange=(e)=>{
+    if(e.target.file && e.target.file[0]){
+      setProductImage(URL.createObjectURL(e.target.file[0]))
+    }
   }
-  // const handleImageChange=(e)=>{
-  //   setProductImage
-
-  // }
-
-
-  // ----------------------------------------------
-  const productID = Array
 
   return (
     <>
@@ -78,26 +69,18 @@ const NewProductPage = ({ onClose, onsubmit,  }) => {
             <h1 className=" normal-case text-xl">Add new product</h1>
             <button
               className="close-modal bg-inherit border-none text-black"
-              onClick={(handleClose)}
+              onClick={handleClose}
             >
               <IoMdClose size={30} />
             </button>
           </div>
           <div className="mt-5 normal-case ">
-            <input
-              id="productID"
-              className="block p-2.5 w-full text-sm text-gray-900 bg-inherit rounded border border-gray-300 e-100 focus:border-blue-100 dark:bg-gray-700 dark:border-gray-600  dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              value={Product - id}
-            />
-
             <label
               htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
               Name of the product
             </label>
-
-
             <input
               id="message"
               className="block p-2.5 w-full text-sm text-gray-900 bg-inherit rounded border border-gray-300 focus:ring-blue-100 focus:border-blue-100 dark:bg-gray-700 dark:border-gray-600  dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -178,12 +161,12 @@ const NewProductPage = ({ onClose, onsubmit,  }) => {
             />
           </div>
 
-          {/* <div className="mt-4">
+          <div className="mt-4">
             <input type="file" 
             accept="image/*"
             onChange={handleImageChange}
             />
-          </div> */}
+          </div>
 
           <button
             className="w-full py-2 flex items-center justify-center rounded-md mt-4 bg-gradient-to-r from-[#181818] to-[#363636] text-white text-xl font-sans"
