@@ -7,8 +7,8 @@ const Card = () => {
 
   
   return (
-    <div className="flex ">
-      <div className="basis-5/12 bg-red-400">
+    <div className="flex rounded-xl overflow-hidden">
+      <div className="basis-5/12">
         <img src={res1} alt="" />
       </div>
       <div className="basis-7/12 bg-red-100 p-4">
