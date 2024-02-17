@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoMdEye, IoIosSettings } from "react-icons/io";
 import Card from "../Card";
-import NewProductPage from "../../../../SideData/NewProductPage";
+import NewProductPage from "../../../../../SideData/NewProductPage";
 
 const ProductContent = () => {
   const [showAddProductPage, setShowAddProductPage] = useState(false);
@@ -11,15 +11,15 @@ const ProductContent = () => {
     setShowAddProductPage(true);
   };
 
-  const handleCloseAddProductPage = (newProduct) => {
+  const handleCloseAddProductPage = () => {
+    setShowAddProductPage(false);
+  };
+
+  const handleSubmit = (newProduct) => {
     setShowAddProductPage(false);
     if (newProduct) {
       setProducts((prevProducts) => [...prevProducts, newProduct]);
     }
-  };
-
-  const handleSubmit = (e) => {
-    setShowAddProductPage(false);
   };
 
   return (
@@ -31,6 +31,7 @@ const ProductContent = () => {
           <div className="flex bg-white flex-col justify-start shadow-md rounded-2xl  max-w-[190px] h-[280px] overflow-hidden mb-2">
             <div className="products-container">
               <div key={index} className="product-card">
+                <img src={product.img} />
                 <div className="flex flex-col items-center justify-center p-6">
                   <h1 className="capitalize font-bold">{product.name}</h1>
                   <span className="font-thin">{product.weight}</span>

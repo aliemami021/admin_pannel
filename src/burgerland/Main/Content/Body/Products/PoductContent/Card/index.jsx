@@ -1,5 +1,5 @@
 import React from "react";
-import burger1 from "../burgerimages/burger1-removebg-preview.png";
+import burger1 from "../../../../../../assets/images/burgerimages/burger1-removebg-preview.png";
 import { IoMdEye, IoIosSettings } from "react-icons/io";
 // import HandleEyeCLick from "./HandleEyeCLick";
 
