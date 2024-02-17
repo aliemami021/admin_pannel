@@ -10,7 +10,7 @@ const Card = () => {
         <img src={res1} alt="" />
       </div>
       <div className="basis-7/12 bg-red-100 p-4">
-        {datas.map(data=>(<p>{data.address}</p>))}
+        {datas.map((data,key)=>(<p key={key}>{data.name}</p>))}
         <div className="flex items-center justify-between">
           <p className="basis-3/5">sdsd</p>
           <BsFillTelephoneFill />

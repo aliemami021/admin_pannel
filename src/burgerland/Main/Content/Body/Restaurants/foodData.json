@@ -1,15 +1,11 @@
-
-
-
 [
     {
-        "id":1,
+        "id": 1,
         "image": "",
-        "name":"felan",
-        "address":"dfddfdfdfdfd",
-        "openingInfo":"",
+        "name": "felan",
+        "address": "dfddfdfdfdfd",
+        "openingInfo": "",
         "isManaged": "Manage Restaurant",
-        "isOn":true
-    },
-    
+        "isOn": true
+    }
 ]
